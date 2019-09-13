@@ -1,0 +1,81 @@
+﻿@model IEnumerable<InternalAudit.Models.RtiPdl>
+@using InternalAudit.Common;
+@using Newtonsoft.Json;
+@{ int rowNo = 0; }
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Internal.cshtml";
+}
+
+@if (ViewData["Msg"] != null)
+{
+    InternalAudit.DTO.MessageDTO msg = ViewData["Msg"] as InternalAudit.DTO.MessageDTO;
+    @await Html.PartialAsync("~/Views/Shared/_ShowMsg.cshtml", msg);
+}
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+@*<link href="~/css/dataTables.material.min.css" rel="stylesheet" />*@
+<link href="~/css/dataTables.jqueryui.min.css" rel="stylesheet" />
+<link href="~/css/jquery.dataTables.min.css" rel="stylesheet" />
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title"></h4>
+                        <p class="card-category">List of RTI PDL </p>
+                        @Html.ActionLink("ADD", "Create", "RtiPdls", null, new { @class = "btn btn-default pull-right", style = "margin-top: -49px;" })
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="mytable" width="100%" class="a display table table-bordered  text-center">
+                                <thead class="thead-light">
+                                    <tr>
+
+                                        <th>Sr.No</th>
+                                        <th>Details</th>
+                                        <th>Original Petitions received directly from the Petitioner</th>
+                                        <th>Appeal petitions received directly from the Petitioner</th>
+                                        <th>Original / Appeal Petitions received through State Information council</th>
+                                        <th>Total</th>
+                                        <th>Operation</th>
+                                    </tr>
+                                </thead>
+                                @foreach (var item in @Model)
+                                {
+                                    <tr>
+                                        <th>
+                                            @(rowNo += 1)
+                                        </th>
+                                        <td>@item.Details</td>
+                                        <td>@item.OriginalPetitions</td>
+                                        <td>@item.Appealpetitions</td>
+                                        <td>@item.OriginalAppealPetitions</td>
+                                        <td>@item.Total</td>
+                                        <td>
+                                            <a asp-action="Edit" asp-controller="RtiPdls" asp-route-id="@item.RtiPdlRecNo" title="Edit"><i class="material-icons">build</i></a>
+                                            <a asp-action="delete" asp-controller="RtiPdls" asp-route-id="@item.RtiPdlRecNo" title="Delete"><i class="material-icons">delete</i></a>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/jquery.min.js"></script>
+@*<script src="~/js/dataTables.material.min.js"></script>*@
+<script src="~/js/dataTables.jqueryui.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.a').DataTable();
+
+    });
+</script>

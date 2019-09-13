@@ -1,0 +1,79 @@
+﻿@model InternalAudit.Models.PdlBoardForm6
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/Internal.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PdlBoardForm6</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NameDesignation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NameDesignation)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StaffMeeting)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StaffMeeting)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficeWorkBillWork)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OfficeWorkBillWork)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AuditWork)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AuditWork)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PucWork)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PucWork)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PensionCertificationWork)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PensionCertificationWork)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OtherDuty)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OtherDuty)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GovtHoliday)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GovtHoliday)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LeaveAvailed)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LeaveAvailed)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalDays)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalDays)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PdlBoradForm6RecNo">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

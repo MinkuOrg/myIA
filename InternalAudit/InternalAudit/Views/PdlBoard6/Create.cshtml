@@ -1,0 +1,102 @@
+﻿@model InternalAudit.Models.PdlBoardForm6
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/Internal.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h4 class="card-title">Monthly Diary of the Staff in the Concurrent Audit Unit (Month / Year)</h4>
+                            </div>
+                            <div class="col-md-4">
+                                @Html.ActionLink("Back", "Index", "PdlBoard6", null, new { @class = "btn btn-default pull-right" })
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="card-body">
+                        <form asp-action="Create">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label asp-for="NameDesignation" class="control-label">Name and Designation of the Staff(Thiru/Tmt/Selvi)</label>
+                                    <input asp-for="NameDesignation" class="form-control" />
+                                    <span asp-validation-for="NameDesignation" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label asp-for="StaffMeeting" class="control-label">Staff Meeting</label>
+                                    <input asp-for="StaffMeeting" class="form-control" />
+                                    <span asp-validation-for="StaffMeeting" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label asp-for="OfficeWorkBillWork" class="control-label">Office Work BillWork</label>
+                                    <input asp-for="OfficeWorkBillWork" class="form-control" />
+                                    <span asp-validation-for="OfficeWorkBillWork" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label asp-for="AuditWork" class="control-label">Audit Work</label>
+                                    <input asp-for="AuditWork" class="form-control" />
+                                    <span asp-validation-for="AuditWork" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label asp-for="PucWork" class="control-label">Puc Work</label>
+                                    <input asp-for="PucWork" class="form-control" />
+                                    <span asp-validation-for="PucWork" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label asp-for="PensionCertificationWork" class="control-label">Pension Certification Work</label>
+                                    <input asp-for="PensionCertificationWork" class="form-control" />
+                                    <span asp-validation-for="PensionCertificationWork" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label asp-for="OtherDuty" class="control-label">Other Duty</label>
+                                    <input asp-for="OtherDuty" class="form-control" />
+                                    <span asp-validation-for="OtherDuty" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label asp-for="GovtHoliday" class="control-label">Govt Holiday</label>
+                                    <input asp-for="GovtHoliday" class="form-control" />
+                                    <span asp-validation-for="GovtHoliday" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label asp-for="LeaveAvailed" class="control-label">Leave Availed</label>
+                                    <input asp-for="LeaveAvailed" class="form-control" />
+                                    <span asp-validation-for="LeaveAvailed" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label asp-for="TotalDays" class="control-label">Total Days</label>
+                                    <input asp-for="TotalDays" class="form-control" />
+                                    <span asp-validation-for="TotalDays" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="row col-12" style="justify-content:center">
+                                <input type="submit" value="Create" class="btn btn-primary" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @if (ViewData["Msg"] != null)
+    {
+        InternalAudit.DTO.MessageDTO msg = ViewData["Msg"] as InternalAudit.DTO.MessageDTO;
+        @await Html.PartialAsync("~/Views/Shared/_ShowMsg.cshtml", msg);
+    }
+    <script src="~/js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js" integrity="sha256-it5nQKHTz+34HijZJQkpNBIHsjpV8b6QzMJs9tmOBSo=" crossorigin="anonymous"></script>

@@ -1,0 +1,77 @@
+﻿@model InternalAudit.Models.RtiPdl
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/Internal.cshtml";
+}
+
+<script src="~/js/jquery.min.js"></script>
+@if (ViewData["Msg"] != null)
+{
+    InternalAudit.DTO.MessageDTO msg = ViewData["Msg"] as InternalAudit.DTO.MessageDTO;
+    @await Html.PartialAsync("~/Views/Shared/_ShowMsg.cshtml", msg);
+}
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h4 class="card-title">List of RTI PDL</h4>
+                            </div>
+                            <div class="col-md-7">
+                                @Html.ActionLink("Back", "Index", "RtiPdls", null, new { @class = "btn btn-default pull-right" })
+                            </div>
+                        </div>
+                    </div><br />
+                    <form asp-action="Edit">
+                        <div class="card-body">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="RtiPdlRecNo" />
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label asp-for="Details" class="control-label"></label>
+                                    <input asp-for="Details" class="form-control" />
+                                    <span asp-validation-for="Details" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label asp-for="OriginalPetitions" class="control-label">Original Petitions received directly from the Petitioner</label>
+                                    <input asp-for="OriginalPetitions" class="form-control" />
+                                    <span asp-validation-for="OriginalPetitions" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label asp-for="Appealpetitions" class="control-label">Appeal petitions received directly from the Petitioner</label>
+                                    <input asp-for="Appealpetitions" class="form-control" />
+                                    <span asp-validation-for="Appealpetitions" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label asp-for="OriginalAppealPetitions" class="control-label">Original / Appeal Petitions received through State Information council	</label>
+                                    <input asp-for="OriginalAppealPetitions" class="form-control" />
+                                    <span asp-validation-for="OriginalAppealPetitions" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label asp-for="Total" class="control-label"></label>
+                                    <input asp-for="Total" class="form-control" />
+                                    <span asp-validation-for="Total" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="row col-12" style="justify-content:center">
+                                <input type="submit" value="Update" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js" integrity="sha256-it5nQKHTz+34HijZJQkpNBIHsjpV8b6QzMJs9tmOBSo=" crossorigin="anonymous"></script>
+

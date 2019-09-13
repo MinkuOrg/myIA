@@ -1,0 +1,62 @@
+﻿@model InternalAudit.Models.TblMasterInstitutions
+
+@{
+    ViewData["Title"] = "InstitutionsEdit";
+    Layout = "~/Views/Shared/Internal.cshtml";
+}
+<script src="~/js/jquery.min.js"></script>
+@if (ViewData["Msg"] != null)
+{
+    InternalAudit.DTO.MessageDTO msg = ViewData["Msg"] as InternalAudit.DTO.MessageDTO;
+    @await Html.PartialAsync("~/Views/Shared/_ShowMsg.cshtml", msg);
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title">Institutions</h4>
+                        <p class="card-category">Institutions List </p>
+                        @Html.ActionLink("Back to List", "InstitutionsDetails", "Institutions", null, new { @class = "btn btn-default pull-right", style = "margin-top: -49px;" })
+                    </div>
+                    <div class="card-body">
+                        <form asp-action="InstitutionsEdit">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="InstitutionsRecNo" />
+                            <div class="form-group">
+                                <label asp-for="District" class="control-label">District</label>
+                                <input asp-for="District" class="form-control" />
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="InstitutionsCategory" class="control-label">Institutions Category</label>
+                                <input asp-for="InstitutionsCategory" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="InstitutionsName" class="control-label">Institutions Name</label>
+                                <input asp-for="InstitutionsName" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="InstitutionsDetails" class="control-label">Institutions Details</label>
+                                <input asp-for="InstitutionsDetails" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Contact" class="control-label">Contact</label>
+                                <input asp-for="Contact" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="EmaiId" class="control-label">EmaiId</label>
+                                <input asp-for="EmaiId" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Update" class="btn btn-outline-primary" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

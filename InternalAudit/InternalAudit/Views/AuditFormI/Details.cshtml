@@ -1,0 +1,49 @@
+﻿@model InternalAudit.Models.AuditPdlFormI
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/Internal.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AuditPdlFormI</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FinancialYear)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinancialYear)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.District)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.District)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Institutions)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Institutions)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CentreInstitutionDetails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CentreInstitutionDetails)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PendencyReasons)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PendencyReasons)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.AuditPdlFormIrecNo">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

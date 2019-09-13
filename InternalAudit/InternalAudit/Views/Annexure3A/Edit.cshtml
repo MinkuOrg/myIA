@@ -1,0 +1,82 @@
+﻿@model InternalAudit.Models.Annexure3FormA
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/Internal.cshtml";
+}
+
+<script src="~/js/jquery.min.js"></script>
+@if (ViewData["Msg"] != null)
+{
+    InternalAudit.DTO.MessageDTO msg = ViewData["Msg"] as InternalAudit.DTO.MessageDTO;
+    @await Html.PartialAsync("~/Views/Shared/_ShowMsg.cshtml", msg);
+}
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h4 class="card-title">
+                                    Details of audit pendency (Month / Year)
+                                </h4>
+                            </div>
+                            <div class="col-md-7">
+                                @Html.ActionLink("Back", "Index", "Annexure3A", null, new { @class = "btn btn-default pull-right" })
+                            </div>
+                        </div>
+                    </div><br />
+                    <form asp-action="Edit">
+                        <div class="card-body">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="Annexure3FormArecNo" />
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label asp-for="AdministrativeDepartment" class="control-label">Administrative Department</label>
+                                    <input asp-for="AdministrativeDepartment" class="form-control" />
+                                    <span asp-validation-for="AdministrativeDepartment" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label asp-for="InstitutionDetails" class="control-label">Institution Details</label>
+                                    <input asp-for="InstitutionDetails" class="form-control" />
+                                    <span asp-validation-for="InstitutionDetails" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label asp-for="Pendency2013To14" class="control-label">Pendency Details 2013-14</label>
+                                    <input asp-for="Pendency2013To14" class="form-control" />
+                                    <span asp-validation-for="Pendency2013To14" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label asp-for="Pendency2014To15" class="control-label">Pendency Details 2014-15</label>
+                                    <input asp-for="Pendency2014To15" class="form-control" />
+                                    <span asp-validation-for="Pendency2014To15" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label asp-for="Pendency2015To16" class="control-label">Pendency Details 2015-16</label>
+                                    <input asp-for="Pendency2015To16" class="form-control" />
+                                    <span asp-validation-for="Pendency2015To16" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label asp-for="Pendency2016To17" class="control-label">Pendency Details 2016-17</label>
+                                    <input asp-for="Pendency2016To17" class="form-control" />
+                                    <span asp-validation-for="Pendency2016To17" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="row col-12" style="justify-content:center">
+                                <input type="submit" value="Update" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js" integrity="sha256-it5nQKHTz+34HijZJQkpNBIHsjpV8b6QzMJs9tmOBSo=" crossorigin="anonymous"></script>

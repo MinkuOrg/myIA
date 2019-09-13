@@ -1,0 +1,136 @@
+﻿@model InternalAudit.Models.AuditPdlForm1a
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/Internal.cshtml";
+}
+
+<script src="~/js/jquery.min.js"></script>
+@if (ViewData["Msg"] != null)
+{
+    InternalAudit.DTO.MessageDTO msg = ViewData["Msg"] as InternalAudit.DTO.MessageDTO;
+    @await Html.PartialAsync("~/Views/Shared/_ShowMsg.cshtml", msg);
+}
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h4 class="card-title">Status of Audit for Month / Year</h4>
+                            </div>
+                            <div class="col-md-7">
+                                @Html.ActionLink("Back", "Index", "AuditForm1a", null, new { @class = "btn btn-default pull-right" })
+                            </div>
+                        </div>
+                    </div><br />
+                    <form asp-action="Edit">
+                        <div class="card-body">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="AuditPdlForm1ArecNo" />
+                            <div class="form-row">
+                                <div class="form-group col-6 col-6">
+                                    <label asp-for="FinancialYear" class="control-label">Select Period Category</label>
+                                    <select asp-for="FinancialYear" class="form-control" asp-items="@(new SelectList(@ViewBag.ListOfFinancialYear, "FinancialYearRecNo", "FinancialYear"));">
+                                        <option value="Select">Select</option>
+                                    </select>
+
+                                </div>
+                                <div class="form-group col-6 ">
+                                    <label asp-for="Institutions" class="control-label"></label>
+                                    <select asp-for="Institutions" class="form-control" asp-items="@(new SelectList(@ViewBag.ListOfInstitutions, "InstitutionsRecNo", "InstitutionsName"));">
+                                        <option value="Select">Select</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-6 col-6">
+                                    <label asp-for="District" class="control-label">Select Period Category</label>
+                                    <select asp-for="District" id="PeriodCategory" class="form-control" asp-items="@(new SelectList(@ViewBag.ListOfDistrict, "DistrictRecNo", "DistrictName"));">
+                                        <option value="Select">Select</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label asp-for="NoOfInstitutions" class="control-label"></label>
+                                    <input asp-for="NoOfInstitutions" class="form-control" />
+                                    <span asp-validation-for="NoOfInstitutions" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label asp-for="InstPendingPrevMonth" class="control-label"></label>
+                                    <input asp-for="InstPendingPrevMonth" class="form-control" />
+                                    <span asp-validation-for="InstPendingPrevMonth" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label asp-for="InstCompletedThisMonth" class="control-label"></label>
+                                    <input asp-for="InstCompletedThisMonth" class="form-control" />
+                                    <span asp-validation-for="InstCompletedThisMonth" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="row p-2">
+                                <div class="form-group col-6">
+                                    <label asp-for="InstPendingEndMonth" class="control-label"></label>
+                                    <input asp-for="InstPendingEndMonth" class="form-control" />
+                                    <span asp-validation-for="InstPendingEndMonth" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="row col-12" style="justify-content:center">
+                                <input type="submit" value="Update" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js" integrity="sha256-it5nQKHTz+34HijZJQkpNBIHsjpV8b6QzMJs9tmOBSo=" crossorigin="anonymous"></script>
+
+@*<script>
+
+
+    $(document).ready(function () {
+        var ddlPeriod = $('#Period');
+        $.ajax({
+            type: "post",
+            url: "/NoonMealForm2/GetPeriodCategory",
+            data: "id=" + $('#PeriodCategory').children("option:selected").val() + "",
+            success: function (data) {
+                var s = '<option value="-1">Please Select a Period</option>';
+                for (var i = 0; i < data.length; i++) {
+                    s += '<option value="' + data[i].recNo + '">' + data[i].name + '</option>';
+                }
+
+                ddlPeriod.html(s);
+                 $("#Period option[value='@Model.Period']").prop('selected', true);
+            }
+        });
+
+
+    });
+
+
+        $('#PeriodCategory').change(function () {
+        var ddlPeriod = $('#Period');
+        $.ajax({
+            type: "post",
+            url: "/NoonMealForm2/GetPeriodCategory",
+            data: "id=" + $(this).children("option:selected").val() + "",
+            success: function (data) {
+                var s = '<option value="-1">Please Select a Period</option>';
+                for (var i = 0; i < data.length; i++) {
+                    s += '<option value="' + data[i].recNo + '">' + data[i].name + '</option>';
+                }
+                ddlPeriod.html(s);
+                //ddlPeriod.append(s);
+            }
+        });
+    });
+
+</script>*@

@@ -1,0 +1,55 @@
+﻿@model InternalAudit.Models.Annexure3FormA
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/Internal.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Annexure3FormA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AdministrativeDepartment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AdministrativeDepartment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InstitutionDetails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InstitutionDetails)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pendency2013To14)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pendency2013To14)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pendency2014To15)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pendency2014To15)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pendency2015To16)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pendency2015To16)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pendency2016To17)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pendency2016To17)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Annexure3FormArecNo">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,73 @@
+﻿@model InternalAudit.Models.CommunityFormB
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/Internal.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CommunityFormB</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DistrictOffice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DistrictOffice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficerPersonnelsName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OfficerPersonnelsName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PostName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PostName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Grade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Grade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JoiningDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JoiningDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Religion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Religion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Category)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FormRecNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FormRecNo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CommunityFormBrecNo">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

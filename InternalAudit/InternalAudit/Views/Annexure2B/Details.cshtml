@@ -1,0 +1,43 @@
+﻿@model InternalAudit.Models.Annexure2FormB
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/Internal.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Annexure2FormB</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AdministrativeDepartment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AdministrativeDepartment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InstitutionDetails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InstitutionDetails)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FinancialYear)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinancialYear)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AuditFees)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AuditFees)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Annexure2FormBrecNo">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

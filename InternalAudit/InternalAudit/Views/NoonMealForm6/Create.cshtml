@@ -1,0 +1,112 @@
+﻿@model InternalAudit.Models.NoonMealPdlForm6
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/Internal.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h4 class="card-title">Status of Audit in respect of ICDS (World Bank) School Centers ……….(Month/Year)</h4>
+                            </div>
+                            <div class="col-md-4">
+                                @Html.ActionLink("Back", "Index", "NoonMealForm6", null, new { @class = "btn btn-default pull-right" })
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="card-body">
+                        <form asp-action="Create">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label asp-for="InstitutionsName" class="control-label"></label>
+                                    <select asp-for="InstitutionsName" class="form-control" asp-items="@(new SelectList(@ViewBag.ListOfInstitutions, "InstitutionsRecNo", "InstitutionsName"));">
+                                        <option value="Select">Select</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-6 ">
+                                    <label asp-for="FinancialYear" class="control-label"></label>
+                                    <select asp-for="FinancialYear" class="form-control" asp-items="@(new SelectList(@ViewBag.ListOfFinancialYear, "FinancialYearRecNo", "FinancialYear"));">
+                                        <option value="Select">Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-6 col-6">
+                                    <label asp-for="PeriodCategory" class="control-label">Select Period Category</label>
+                                    <select asp-for="PeriodCategory" id="PeriodCategory" class="form-control" asp-items="@(new SelectList(@ViewBag.ListOfPeriodCategory, "PeriodCategoryRecNo", "PeriodCategory"));">
+                                        <option value="Select">Select</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label asp-for="Period" class="control-label">Select Period</label>
+                                    <select asp-for="Period" class="form-control">
+                                        <option value="Select">Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label asp-for="TotalCenter" class="control-label"></label>
+                                    <input asp-for="TotalCenter" class="form-control" />
+                                    <span asp-validation-for="TotalCenter" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label asp-for="Completed" class="control-label"></label>
+                                    <input asp-for="Completed" class="form-control" />
+                                    <span asp-validation-for="Completed" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="row p-2">
+                                <div class="form-group col-6">
+                                    <label asp-for="Pending" class="control-label"></label>
+                                    <input asp-for="Pending" class="form-control" />
+                                    <span asp-validation-for="Pending" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="row col-12" style="justify-content:center">
+                                <input type="submit" value="Create" class="btn btn-primary" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @if (ViewData["Msg"] != null)
+    {
+        InternalAudit.DTO.MessageDTO msg = ViewData["Msg"] as InternalAudit.DTO.MessageDTO;
+        @await Html.PartialAsync("~/Views/Shared/_ShowMsg.cshtml", msg);
+    }
+</div>
+
+<script src="~/js/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js" integrity="sha256-it5nQKHTz+34HijZJQkpNBIHsjpV8b6QzMJs9tmOBSo=" crossorigin="anonymous"></script>
+
+<script>
+    debugger;
+    $('#PeriodCategory').change(function () {
+        var ddlPeriod = $('#Period');
+        $.ajax({
+            type: "post",
+            url: "/NoonMealForm6/GetPeriodCategory",
+            data: "id=" + $(this).children("option:selected").val() + "",
+            success: function (data) {
+                var s = '<option value="-1">Please Select a Period</option>';
+                for (var i = 0; i < data.length; i++) {
+                    s += '<option value="' + data[i].recNo + '">' + data[i].name + '</option>';
+                }
+                ddlPeriod.html(s);
+            }
+        });
+    }
+    )
+
+</script>

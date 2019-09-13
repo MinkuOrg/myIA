@@ -1,0 +1,160 @@
+﻿@model InternalAudit.Models.NoonMealPdlForm13
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/Internal.cshtml";
+}
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h4 class="card-title">Details of sanctioned & filled up posts of Staff…… (Month/Year)</h4>
+                            </div>
+                            <div class="col-md-7">
+                                @Html.ActionLink("Back", "Index", "NoonMealForm13", null, new { @class = "btn btn-default pull-right" })
+                            </div>
+                        </div>
+                    </div><br />
+
+                    <form asp-action="Delete" method="post">
+                        <div class="form-group">
+                            <h6 class="p-4">Are you sure you want to delete this</h6>
+                            <input type="hidden" asp-for="NoonMealRecNo" />
+                        </div>
+                        <div class="card-footer text-center">
+                            <div class="row col-12" style="justify-content:center;">
+                                <div class="col-1">
+                                    <input type="submit" value="Delete" class="btn btn-primary" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@if (ViewData["Msg"] != null)
+{
+    InternalAudit.DTO.MessageDTO msg = ViewData["Msg"] as InternalAudit.DTO.MessageDTO;
+    @await Html.PartialAsync("~/Views/Shared/_ShowMsg.cshtml", msg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*@model InternalAudit.Models.NoonMealPdlForm13
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/Internal.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>NoonMealPdlForm13</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Subject)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Subject)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AsstDirector)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AsstDirector)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Inspector)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Inspector)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeputyInspector)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeputyInspector)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AssistantInspector)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AssistantInspector)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JuniorAssistant)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JuniorAssistant)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Typist)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Typist)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RecordClerk)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RecordClerk)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficeAssistant)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OfficeAssistant)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="NoonMealRecNo" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>*@

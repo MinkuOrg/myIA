@@ -1,0 +1,53 @@
+D:\InternalAudit\InternalAudit\InternalAudit.DTO\bin\Debug\netcoreapp2.1\InternalAudit.DTO.deps.json
+D:\InternalAudit\InternalAudit\InternalAudit.DTO\bin\Debug\netcoreapp2.1\InternalAudit.DTO.dll
+D:\InternalAudit\InternalAudit\InternalAudit.DTO\bin\Debug\netcoreapp2.1\InternalAudit.DTO.pdb
+D:\InternalAudit\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.csproj.CoreCompileInputs.cache
+D:\InternalAudit\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.AssemblyInfoInputs.cache
+D:\InternalAudit\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.AssemblyInfo.cs
+D:\InternalAudit\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.dll
+D:\InternalAudit\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.pdb
+E:\Sachin\Minku\InternalAudit\InternalAudit.DTO\bin\Debug\netcoreapp2.1\InternalAudit.DTO.deps.json
+E:\Sachin\Minku\InternalAudit\InternalAudit.DTO\bin\Debug\netcoreapp2.1\InternalAudit.DTO.dll
+E:\Sachin\Minku\InternalAudit\InternalAudit.DTO\bin\Debug\netcoreapp2.1\InternalAudit.DTO.pdb
+E:\Sachin\Minku\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.csprojAssemblyReference.cache
+E:\Sachin\Minku\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.csproj.CoreCompileInputs.cache
+E:\Sachin\Minku\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.AssemblyInfoInputs.cache
+E:\Sachin\Minku\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.AssemblyInfo.cs
+E:\Sachin\Minku\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.dll
+E:\Sachin\Minku\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.pdb
+D:\SADHANA\InternalAuditSachin\InternalAudit\InternalAudit.DTO\bin\Debug\netcoreapp2.1\InternalAudit.DTO.deps.json
+D:\SADHANA\InternalAuditSachin\InternalAudit\InternalAudit.DTO\bin\Debug\netcoreapp2.1\InternalAudit.DTO.dll
+D:\SADHANA\InternalAuditSachin\InternalAudit\InternalAudit.DTO\bin\Debug\netcoreapp2.1\InternalAudit.DTO.pdb
+D:\SADHANA\InternalAuditSachin\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.csprojAssemblyReference.cache
+D:\SADHANA\InternalAuditSachin\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.csproj.CoreCompileInputs.cache
+D:\SADHANA\InternalAuditSachin\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.AssemblyInfoInputs.cache
+D:\SADHANA\InternalAuditSachin\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.AssemblyInfo.cs
+D:\SADHANA\InternalAuditSachin\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.dll
+D:\SADHANA\InternalAuditSachin\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.pdb
+E:\Sachin\Minku\Sadhana\InternalAuditSachin\InternalAudit\InternalAudit.DTO\bin\Debug\netcoreapp2.1\InternalAudit.DTO.deps.json
+E:\Sachin\Minku\Sadhana\InternalAuditSachin\InternalAudit\InternalAudit.DTO\bin\Debug\netcoreapp2.1\InternalAudit.DTO.dll
+E:\Sachin\Minku\Sadhana\InternalAuditSachin\InternalAudit\InternalAudit.DTO\bin\Debug\netcoreapp2.1\InternalAudit.DTO.pdb
+E:\Sachin\Minku\Sadhana\InternalAuditSachin\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.csprojAssemblyReference.cache
+E:\Sachin\Minku\Sadhana\InternalAuditSachin\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.csproj.CoreCompileInputs.cache
+E:\Sachin\Minku\Sadhana\InternalAuditSachin\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.AssemblyInfoInputs.cache
+E:\Sachin\Minku\Sadhana\InternalAuditSachin\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.AssemblyInfo.cs
+E:\Sachin\Minku\Sadhana\InternalAuditSachin\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.dll
+E:\Sachin\Minku\Sadhana\InternalAuditSachin\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.pdb
+C:\Users\Acer2\Desktop\sachin sir 4 sep\SMSAPI1\InternalAuditSachin\InternalAudit\InternalAudit.DTO\bin\Debug\netcoreapp2.1\InternalAudit.DTO.deps.json
+C:\Users\Acer2\Desktop\sachin sir 4 sep\SMSAPI1\InternalAuditSachin\InternalAudit\InternalAudit.DTO\bin\Debug\netcoreapp2.1\InternalAudit.DTO.dll
+C:\Users\Acer2\Desktop\sachin sir 4 sep\SMSAPI1\InternalAuditSachin\InternalAudit\InternalAudit.DTO\bin\Debug\netcoreapp2.1\InternalAudit.DTO.pdb
+C:\Users\Acer2\Desktop\sachin sir 4 sep\SMSAPI1\InternalAuditSachin\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.csproj.CoreCompileInputs.cache
+C:\Users\Acer2\Desktop\sachin sir 4 sep\SMSAPI1\InternalAuditSachin\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.AssemblyInfoInputs.cache
+C:\Users\Acer2\Desktop\sachin sir 4 sep\SMSAPI1\InternalAuditSachin\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.AssemblyInfo.cs
+C:\Users\Acer2\Desktop\sachin sir 4 sep\SMSAPI1\InternalAuditSachin\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.dll
+C:\Users\Acer2\Desktop\sachin sir 4 sep\SMSAPI1\InternalAuditSachin\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.pdb
+C:\Users\Acer2\Desktop\sachin sir 4 sep\SMSAPI1\InternalAuditSachin\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.csprojAssemblyReference.cache
+D:\Minku's Internal Audit Project\InternalAuditMinku\InternalAuditMinku\InternalAudit\InternalAudit.DTO\bin\Debug\netcoreapp2.1\InternalAudit.DTO.deps.json
+D:\Minku's Internal Audit Project\InternalAuditMinku\InternalAuditMinku\InternalAudit\InternalAudit.DTO\bin\Debug\netcoreapp2.1\InternalAudit.DTO.dll
+D:\Minku's Internal Audit Project\InternalAuditMinku\InternalAuditMinku\InternalAudit\InternalAudit.DTO\bin\Debug\netcoreapp2.1\InternalAudit.DTO.pdb
+D:\Minku's Internal Audit Project\InternalAuditMinku\InternalAuditMinku\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.csproj.CoreCompileInputs.cache
+D:\Minku's Internal Audit Project\InternalAuditMinku\InternalAuditMinku\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.AssemblyInfoInputs.cache
+D:\Minku's Internal Audit Project\InternalAuditMinku\InternalAuditMinku\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.AssemblyInfo.cs
+D:\Minku's Internal Audit Project\InternalAuditMinku\InternalAuditMinku\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.dll
+D:\Minku's Internal Audit Project\InternalAuditMinku\InternalAuditMinku\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.pdb
+D:\Minku's Internal Audit Project\InternalAuditMinku\InternalAuditMinku\InternalAudit\InternalAudit.DTO\obj\Debug\netcoreapp2.1\InternalAudit.DTO.csprojAssemblyReference.cache

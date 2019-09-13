@@ -1,0 +1,73 @@
+﻿@model InternalAudit.Models.Annexure1FormA
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/Internal.cshtml";
+}
+
+<script src="~/js/jquery.min.js"></script>
+@if (ViewData["Msg"] != null)
+{
+    InternalAudit.DTO.MessageDTO msg = ViewData["Msg"] as InternalAudit.DTO.MessageDTO;
+    @await Html.PartialAsync("~/Views/Shared/_ShowMsg.cshtml", msg);
+}
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h4 class="card-title">
+                                    Details of audit pendency (Month / Year)
+                                </h4>
+                            </div>
+                            <div class="col-md-7">
+                                @Html.ActionLink("Back", "Index", "Annexure1A", null, new { @class = "btn btn-default pull-right" })
+                            </div>
+                        </div>
+                    </div><br />
+                    <form asp-action="Edit">
+                        <div class="card-body">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="Annexure1FormArecNo" />
+                            <div class="form-row">
+                                <div class="form-group col-6 col-6">
+                                    <label asp-for="FinancialYear" class="control-label">Select Period Category</label>
+                                    <select asp-for="FinancialYear" class="form-control" asp-items="@(new SelectList(@ViewBag.ListOfFinancialYear, "FinancialYearRecNo", "FinancialYear"));">
+                                        <option value="Select">Select</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-6 col-6">
+                                    <label asp-for="District" class="control-label">Select Period Category</label>
+                                    <select asp-for="District" id="PeriodCategory" class="form-control" asp-items="@(new SelectList(@ViewBag.ListOfDistrict, "DistrictRecNo", "DistrictName"));">
+                                        <option value="Select">Select</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label asp-for="AgricultureExtenCentre" class="control-label"></label>
+                                    <input asp-for="AgricultureExtenCentre" class="form-control" />
+                                    <span asp-validation-for="AgricultureExtenCentre" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label asp-for="PendencyDetail" class="control-label"></label>
+                                    <input asp-for="PendencyDetail" class="form-control" />
+                                    <span asp-validation-for="PendencyDetail" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="row col-12" style="justify-content:center">
+                                <input type="submit" value="Update" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js" integrity="sha256-it5nQKHTz+34HijZJQkpNBIHsjpV8b6QzMJs9tmOBSo=" crossorigin="anonymous"></script>

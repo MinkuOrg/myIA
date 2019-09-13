@@ -1,0 +1,67 @@
+﻿@model InternalAudit.Models.Annexure4FormB
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/Internal.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h4 class="card-title">
+                                    Waqf Institutions (Month / Year)
+                                    Details of pending audit fees (From 1996-97)
+                                </h4>
+                            </div>
+                            <div class="col-md-4">
+                                @Html.ActionLink("Back", "Index", "Annexure4B", null, new { @class = "btn btn-default pull-right" })
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="card-body">
+                        <form asp-action="Create">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label asp-for="Institutions" class="control-label"></label>
+                                    <select asp-for="Institutions" class="form-control" asp-items="@(new SelectList(@ViewBag.ListOfInstitutions, "InstitutionsRecNo", "InstitutionsName"));">
+                                        <option value="Select">Select</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-6 ">
+                                    <label asp-for="FinancialYear" class="control-label"></label>
+                                    <select asp-for="FinancialYear" class="form-control" asp-items="@(new SelectList(@ViewBag.ListOfFinancialYear, "FinancialYearRecNo", "FinancialYear"));">
+                                        <option value="Select">Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label asp-for="AuditFees" class="control-label"></label>
+                                    <input asp-for="AuditFees" class="form-control" />
+                                    <span asp-validation-for="AuditFees" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="row col-12" style="justify-content:center">
+                                <input type="submit" value="Create" class="btn btn-primary" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    @if (ViewData["Msg"] != null)
+    {
+        InternalAudit.DTO.MessageDTO msg = ViewData["Msg"] as InternalAudit.DTO.MessageDTO;
+        @await Html.PartialAsync("~/Views/Shared/_ShowMsg.cshtml", msg);
+    }
+    <script src="~/js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js" integrity="sha256-it5nQKHTz+34HijZJQkpNBIHsjpV8b6QzMJs9tmOBSo=" crossorigin="anonymous"></script>

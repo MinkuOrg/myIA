@@ -1,0 +1,118 @@
+﻿@model InternalAudit.Models.CommunityFormB
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/Internal.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h4 class="card-title">Communial FORM-B </h4>
+                                <h4 class="card-title">Community wise Officers / Staffs Name details as on</h4>
+                            </div>
+                            <div class="col-md-4">
+                                @Html.ActionLink("Back", "Index", "CommunityB", null, new { @class = "btn btn-default pull-right" })
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="card-body">
+                        <form asp-action="Create">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label asp-for="DistrictOffice" class="control-label">District Office</label>
+                                    <input asp-for="DistrictOffice" class="form-control" />
+                                    <span asp-validation-for="DistrictOffice" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label asp-for="OfficerPersonnelsName" class="control-label">Officer Personnels Name</label>
+                                    <input asp-for="OfficerPersonnelsName" class="form-control" />
+                                    <span asp-validation-for="OfficerPersonnelsName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label asp-for="PostName" class="control-label">Post Name</label>
+                                    <input asp-for="PostName" class="form-control" />
+                                    <span asp-validation-for="PostName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-6 col-6">
+                                    <label asp-for="Grade" class="control-label">Grade</label>
+                                    <select asp-for="Grade" class="form-control">
+                                        <option value="Select">Select Grade</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="C">C</option>
+                                        <option value="D">D</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label asp-for="JoiningDate" class="control-label">Joining Date</label>
+                                    <input asp-for="JoiningDate" type="date" class="form-control" />
+                                    <span asp-validation-for="JoiningDate" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-6 col-6">
+                                    <label asp-for="Gender" class="control-label">Gender</label>
+                                    <select asp-for="Gender" class="form-control">
+                                        <option value="Select">Select Gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-6 col-6">
+                                    <label asp-for="Religion" class="control-label">Religion</label>
+                                    <select asp-for="Religion" class="form-control">
+                                        <option value="Select">Select Religion</option>
+                                        <option value="Hindu">Hindu</option>
+                                        <option value="Muslim">Muslim</option>
+                                        <option value="Christian">Christian</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-6 col-6">
+                                    <label asp-for="Category" class="control-label">Category</label>
+                                    <select asp-for="Category" class="form-control">
+                                        <option value="Select">Select Category</option>
+                                        <option value="General">General</option>
+                                        <option value="Backward class">Backward class</option>
+                                        <option value="Most Backward class">Most Backward class</option>
+                                        <option value="Schedule caste">Schedule caste</option>
+                                        <option value="Schedule caste (Arundhathienar)">Schedule caste (Arundhathienar)</option>
+                                        <option value="Schedule Tribes">Schedule Tribes</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row col-12" style="justify-content:center">
+                                <input type="submit" value="Create" class="btn btn-primary" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @if (ViewData["Msg"] != null)
+    {
+        InternalAudit.DTO.MessageDTO msg = ViewData["Msg"] as InternalAudit.DTO.MessageDTO;
+        @await Html.PartialAsync("~/Views/Shared/_ShowMsg.cshtml", msg);
+    }
+    <script src="~/js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js" integrity="sha256-it5nQKHTz+34HijZJQkpNBIHsjpV8b6QzMJs9tmOBSo=" crossorigin="anonymous"></script>
+
+
+
+
+

@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Minku's Internal Audit Project\\InternalAuditMinku\\InternalAuditMinku\\InternalAudit\\InternalAudit.DTO\\InternalAudit.DTO.csproj": {}
+  },
+  "projects": {
+    "D:\\Minku's Internal Audit Project\\InternalAuditMinku\\InternalAuditMinku\\InternalAudit\\InternalAudit.DTO\\InternalAudit.DTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Minku's Internal Audit Project\\InternalAuditMinku\\InternalAuditMinku\\InternalAudit\\InternalAudit.DTO\\InternalAudit.DTO.csproj",
+        "projectName": "InternalAudit.DTO",
+        "projectPath": "D:\\Minku's Internal Audit Project\\InternalAuditMinku\\InternalAuditMinku\\InternalAudit\\InternalAudit.DTO\\InternalAudit.DTO.csproj",
+        "packagesPath": "C:\\Users\\Acer2\\.nuget\\packages\\",
+        "outputPath": "D:\\Minku's Internal Audit Project\\InternalAuditMinku\\InternalAuditMinku\\InternalAudit\\InternalAudit.DTO\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Acer2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

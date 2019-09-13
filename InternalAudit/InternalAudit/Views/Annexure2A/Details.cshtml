@@ -1,0 +1,49 @@
+﻿@model InternalAudit.Models.Annexure2FormA
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/Internal.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Annexure2FormA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.WeightMeasurementLabour)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WeightMeasurementLabour)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pendency2013To14)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pendency2013To14)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pendency2014To15)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pendency2014To15)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pendency2015To16)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pendency2015To16)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pendency2016To17)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pendency2016To17)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Annexure2FormArecNo">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

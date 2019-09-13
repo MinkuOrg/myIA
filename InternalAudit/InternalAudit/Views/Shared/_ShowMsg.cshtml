@@ -1,0 +1,27 @@
+﻿@model InternalAudit.DTO.MessageDTO
+<script src="~/js/jquery.min.js"></script>
+ 
+<script type="text/javascript">
+    $(function () {
+        $('.modal').modal('show'); 
+    }); 
+     
+</script> 
+<button class="btn btn-primary" id="btnNotify" style="display:none" onclick="md.showNotification('top','right')">Top Right Notification</button>
+
+
+<div class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="@(Model.Status=="S"? "modal-header btn btn-primary":"modal-header btn btn-danger")" style="display:block">
+                <h6 class="modal-title">Message from System</h6>
+            </div>
+            <div class="modal-body">
+                @Html.Raw(Model.Message)
+            </div>
+            <div class="modal-footer">
+                <a asp-action="@Model.BackPageAction" asp-controller="@Model.BackPageController" class="@(Model.Status=="S"? "btn btn-primary":"btn btn-danger")">Back</a>
+            </div>
+        </div>
+    </div>
+</div>

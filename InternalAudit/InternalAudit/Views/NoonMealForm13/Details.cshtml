@@ -1,0 +1,73 @@
+﻿@model InternalAudit.Models.NoonMealPdlForm13
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/Internal.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NoonMealPdlForm13</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Subject)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Subject)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AsstDirector)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AsstDirector)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Inspector)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Inspector)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeputyInspector)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeputyInspector)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AssistantInspector)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AssistantInspector)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JuniorAssistant)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JuniorAssistant)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Typist)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Typist)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RecordClerk)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RecordClerk)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficeAssistant)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OfficeAssistant)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.NoonMealRecNo">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
